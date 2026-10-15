@@ -1,17 +1,22 @@
 schema: osera-patch-evidence/0.1.0
 producer: moderne
-release: 1.3.23.1-osera-00001
+release: 1.3.23.1-osera-00002
 baseline: v1.3.23+patch.baseline
 fixes:
   - cve: CVE-2025-22227
     upstream: https://nvd.nist.gov/vuln/detail/CVE-2025-22227
     artifacts:
       - io.projectreactor.netty:reactor-netty-http
-    note: New in this release; ported onto 2020.0.47; fixed at 1.0.48.1-backpatch-00001 (backpatch-reactor-netty@fa4fd4a..e6c0969).
+    note: Carried from 2020.0.47.1-backpatch-00001; ported onto 2020.0.47; fixed at 1.0.48.1-backpatch-00001 (backpatch-reactor-netty@fa4fd4a..e6c0969).
+  - cve: CVE-2026-41715
+    upstream: https://nvd.nist.gov/vuln/detail/CVE-2026-41715
+    artifacts:
+      - io.projectreactor.netty:reactor-netty-http
+    note: New in this release; ported onto 2020.0.47; fixed at 1.0.48.1-backpatch-00002 (backpatch-reactor-netty@82062d9..948035b).
 tests:
-  commit: a7ba59b7f348087bd10a550f6c9afe26a5f11a7f
+  commit: ebbbbc6f9170fabe8edc25927b7cc3aea2b59f8e
   command: none in this repository
   runtime: none, no build or test ran for this release
   report: carried, see the evidence of the release named in the note
   result: pass
-  note: this release changes nothing in this repository, nothing ran here; its test provenance is reactor-2020.0 2020.0.47.1-osera-00001 in finos-osera-forks/patch-reactor at v2020.0.47.1-osera-00001, whose .osera/patch-evidence.yaml records the tests that ran
+  note: this release changes nothing in this repository, nothing ran here; its test provenance is reactor-2020.0 2020.0.47.1-osera-00002 in finos-osera-forks/patch-reactor at v2020.0.47.1-osera-00002, whose .osera/patch-evidence.yaml records the tests that ran
